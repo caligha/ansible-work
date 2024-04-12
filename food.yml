@@ -10,7 +10,7 @@
         state: present
 
     - name: Install httpd
-     yum: 
+      yum: 
         name: httpd 
         state: present
 
@@ -28,4 +28,3 @@
       git: 
         repo: https://github.com/CeeyIT-Solutions/food3.git
         dest: /var/www/html
-...
