@@ -9,6 +9,11 @@
         name: git
         state: present
 
+    - name: Install httpd
+     yum: 
+        name: httpd 
+        state: present
+
     - name: Host Code
       git: 
         repo: https://github.com/CeeyIT-Solutions/food3.git
