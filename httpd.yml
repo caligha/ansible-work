@@ -14,8 +14,7 @@
         name: httpd
         state: started
 
-    - name: Enable Httpd on boot
+    - name: Enable Httpd
       service: 
         name: httpd
         enabled: yes
-        ...
