@@ -13,4 +13,5 @@
       git: 
         repo: https://github.com/caligha/ecomm1.git
         dest: /var/www/html
+        force: yes 
 ...
