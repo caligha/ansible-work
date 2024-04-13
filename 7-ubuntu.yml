@@ -16,5 +16,5 @@
 
     - name: Enable Apache2
       service: 
-        name:apache2
+        name: apache2
         enabled: yes
