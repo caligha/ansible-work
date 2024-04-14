@@ -7,19 +7,19 @@
       apt: 
         name: apache2
         state: present
-      when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+      when: ansible_distribution == "Ubuntu" or ansible_distribution
 
     - name: Start Apache2
       service: 
         name: apache2
         state: started
-      when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+      when: ansible_distribution == "Ubuntu" or ansible_distribution
 
     - name: Enable Apache2
       service: 
         name: apache2
         enabled: yes 
-      when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+      when: ansible_distribution == "Ubuntu" or ansible_distribution
 
     - name: Install HTTPD on Amazon
       dnf: 
@@ -45,17 +45,17 @@
       yum: 
         name: httpd
         state: present
-      when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+      when: ansible_distribution == "CentOS" or ansible_distribution
 
 
     - name: Start Httpd on CentOS
       service: 
         name: httpd
         state: started
-      when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+      when: ansible_distribution == "CentOS" or ansible_distribution
 
     - name: Enable Httpd on CentOS
       service: 
         name: httpd
         enabled: yes
-      when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+      when: ansible_distribution == "CentOS" or ansible_distribution
