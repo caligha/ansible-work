@@ -22,23 +22,23 @@
       when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
 
     - name: Install HTTPD on Amazon
-      yum: 
+      dnf: 
         name: httpd
         state: present
-      when: ansible_distribution == "Amazon" or ansible_distribution == "centos"
+      when: ansible_distribution == "Amazon" or ansible_distribution
 
     - name: Start Httpd on Amazon
       service: 
         name: httpd
         state: started
-      when: ansible_distribution == "Amazon" or ansible_distribution == "centos"
+      when: ansible_distribution == "Amazon" or ansible_distribution
 
 
     - name: Enable Httpd on Amazon
       service: 
         name: httpd
         enabled: yes
-      when: ansible_distribution == "Amazon" or ansible_distribution == "centos"
+      when: ansible_distribution == "Amazon" or ansible_distribution 
 
 
     - name: Install HTTPD on CentOS
