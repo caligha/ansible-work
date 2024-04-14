@@ -1,14 +1,13 @@
 ---
-- name: Varibles Demo
+- name: Variables Demo
   hosts: g1
   become: yes
-  vars :
-  myusername: techt
+  vars:
+    myusername: techt
   
   tasks:
-    - name: Update  Dynamic Page
+    - name: Update Dynamic Page
       template: 
         src: dynamic.j2
         dest: /var/www/html/dynamic.html
         force: yes 
-...
